@@ -16,6 +16,9 @@ const customTheme = createMuiTheme({
   typography: {
     fontFamily: ["montserrat"].join(","),
   },
+  shape: {
+    borderRadius: 0,
+  }, 
 
   palette: {
     //#00365C #013C68 #004B7D  #07508C #00AD91 #F2FBFF
@@ -79,17 +82,22 @@ function App() {
                   justify="space-between"
                   alignItems="center"
                   gutterBottom
+                  spacing={1}
                 >
-                  <Box item xs={9} py={1}>
-                    <Button variant="contained" color="primary">
-                      OBTENÉ CRÉDITO
+                  <Grid item xs={8}>
+                  <Box>
+                    <Button variant="contained" color="primary" size='large' fullWidth>
+                    <Box fontWeight="fontWeightMedium" fontSize={20}>OBTENÉ CRÉDITO</Box>
                     </Button>
                   </Box>
-                  <Box item xs={3}>
-                    <Button variant="contained" color="secondary">
+                  </Grid>
+                  <Grid item xs={4}>
+                  <Box>
+                    <Button variant="contained" color="secondary" size='small'>
                       VER DETALLE DE CUOTAS
                     </Button>
                   </Box>
+                  </Grid>
                 </Grid>
                 </Box>
               </Container>

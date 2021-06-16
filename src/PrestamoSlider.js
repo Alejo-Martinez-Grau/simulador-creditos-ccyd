@@ -48,7 +48,7 @@ const PrestamoSlider = () => {
           startAdornment={<InputAdornment position="start">$</InputAdornment>}
           onBlur={handleBlur}
           inputProps={{
-            step: 1,
+            step: 500,
             min: 5000,
             max: 50000,
             type: "number",
@@ -63,7 +63,7 @@ const PrestamoSlider = () => {
         aria-labelledby="cuotas-slider"
         valueLabelDisplay="auto"
         
-        step={1}
+        step={500}
         marks={marks}
         min={5000}
         max={50000}
