@@ -39,7 +39,7 @@ const CuotasSlider = () => {
          alignItems="center"
       >
           <Box color='default.main' >
-        <Typography variant='h6'>Plazo:</Typography>
+        <Typography variant='body1'><Box fontWeight='fontWeightLight'> PLAZO:</Box></Typography>
         </Box>
         <OutlinedInput
         color='primary'

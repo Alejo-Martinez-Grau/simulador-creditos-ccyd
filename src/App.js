@@ -30,7 +30,7 @@ const customTheme = createMuiTheme({
       main: "#07508C",
     },
     default: {
-      main: "#F2FBFF",
+      main: "#FFF",
     },
     bg1: {
       main: "#00365C",
@@ -48,7 +48,7 @@ function App() {
               <Container>
                 <Box p={4} color="default.main">
                   <Typography component="h1" variant="h4" align="center">
-                    Simulá tu crédito
+                    <Box fontWeight='fontWeightBold'> Simulá tu crédito</Box>
                   </Typography>
                 </Box>
                 <Box  px={3}>

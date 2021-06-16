@@ -31,14 +31,14 @@ const PrestamoSlider = () => {
     },
   ];
   return (
-    <Box color="default.main">
+    <Box color="#FFF">
       <Grid
          container
          direction="row"
          justify="space-between"
          alignItems="center"
       >
-        <Typography variant='h6'>Monto Total:</Typography>
+        <Typography variant='body1'><Box fontWeight='fontWeightLight'> MONTO TOTAL:</Box></Typography>
         <OutlinedInput
         color='secondary'
         variant="outlined"
