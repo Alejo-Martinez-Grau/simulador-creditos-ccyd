@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@material-ui/core/CssBaseline'
+import "typeface-montserrat";
 
 ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
-    <App/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

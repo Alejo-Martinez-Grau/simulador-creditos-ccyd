@@ -31,7 +31,7 @@ const PrestamoSlider = () => {
     },
   ];
   return (
-    <Box>
+    <Box color="default.main">
       <Grid
          container
          direction="row"
@@ -40,7 +40,7 @@ const PrestamoSlider = () => {
       >
         <Typography variant='h6'>Monto Total:</Typography>
         <OutlinedInput
-        color='primary'
+        color='secondary'
         variant="outlined"
           value={value}
           margin="dense"
@@ -58,6 +58,7 @@ const PrestamoSlider = () => {
       </Grid>
 
       <Slider
+        color='secondary'
         defaultValue={50000}
         aria-labelledby="cuotas-slider"
         valueLabelDisplay="auto"

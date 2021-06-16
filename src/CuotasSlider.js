@@ -38,7 +38,9 @@ const CuotasSlider = () => {
          justify="space-between"
          alignItems="center"
       >
+          <Box color='default.main' >
         <Typography variant='h6'>Plazo:</Typography>
+        </Box>
         <OutlinedInput
         color='primary'
         variant="outlined"
