@@ -43,8 +43,9 @@ const CuotasSlider = () => {
           <Box color='primary.main' >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> PLAZO:</Box></Typography>
         </Box>
+        <Grid item xs={4}>
         <OutlinedInput
-          
+          fullWidth
         variant="outlined"
           value={value}
           margin="dense"
@@ -58,6 +59,7 @@ const CuotasSlider = () => {
             "aria-labelledby": "cuotas-slider",
           }}
         />
+        </Grid>
       </Grid>
 
       <Slider

@@ -16,6 +16,8 @@ import customTheme from "./customTheme";
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
+
+      {/* Marco */}
       <Container maxWidth="sm">
         <Box p={2} bgcolor="secondary.main">
           <Paper>
@@ -37,7 +39,7 @@ function App() {
                   <CuotasSlider />
                 </Box>
 
-                {/* Valor de Cuota */}
+                {/*Caja con Valor de Cuota */}
                 <Box color="default.main" bgcolor='#00243d' p={1}>
                   <Grid
                     container
@@ -67,14 +69,14 @@ function App() {
                 >
                   <Grid item xs={8}>
                   <Box>
-                    <Button variant="contained" color="primary" size='large' fullWidth>
+                    <Button variant="contained" color="primary" size='large' onClick={()=> (console.log('Boton: Obtené Crédito.'))} fullWidth>
                     <Box fontWeight="fontWeightMedium" fontSize={20}>OBTENÉ CRÉDITO</Box>
                     </Button>
                   </Box>
                   </Grid>
                   <Grid item xs={4}>
                   <Box>
-                    <Button variant="contained" color="secondary" size='small'>
+                    <Button variant="contained" color="secondary" size='small' onClick={()=> (console.log('Boton: Ver detalle de cuotas.'))}>
                       VER DETALLE DE CUOTAS
                     </Button>
                   </Box>

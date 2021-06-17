@@ -43,7 +43,9 @@ const PrestamoSlider = () => {
          alignItems="center"
       >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> MONTO TOTAL:</Box></Typography>
+        <Grid item xs={4}>
         <OutlinedInput
+        
         color='primary'
         variant="outlined"
           value={value}
@@ -59,6 +61,7 @@ const PrestamoSlider = () => {
             "aria-labelledby": "cuotas-slider",
           }}
         />
+        </Grid>
       </Grid>
 
       <Slider
