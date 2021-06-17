@@ -4,22 +4,22 @@ import sliderTheme from "./slidersTheme";
 
 
 
-const PrestamoSlider = () => {
-  const [value, setValue] = React.useState(50000);
+const PrestamoSlider = (props) => {
+  const [valuePrestamo, setValuePrestamo] = React.useState(50000);
 
   const handleSliderChange = (event, newValue) => {
-    setValue(newValue);
+    setValuePrestamo(newValue);
   };
 
   const handleInputChange = (event) => {
-    setValue(event.target.value === "" ? "" : Number(event.target.value));
+    setValuePrestamo(event.target.value === "" ? "" : Number(event.target.value));
   };
 
   const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 50000) {
-      setValue(50000);
+    if (valuePrestamo < 5000) {
+      setValuePrestamo(5000);
+    } else if (valuePrestamo > 50000) {
+      setValuePrestamo(50000);
     }
   };
 
@@ -43,12 +43,12 @@ const PrestamoSlider = () => {
          alignItems="center"
       >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> MONTO TOTAL:</Box></Typography>
-        <Grid item xs={4}>
+        <Grid item sm={4} xs={5}>
         <OutlinedInput
         
         color='primary'
         variant="outlined"
-          value={value}
+          value={valuePrestamo}
           margin="dense"
           onChange={handleInputChange}
           startAdornment={<InputAdornment position="start">$</InputAdornment>}
@@ -74,7 +74,7 @@ const PrestamoSlider = () => {
         marks={marks}
         min={5000}
         max={50000}
-        value={typeof value === "number" ? value : 0}
+        value={typeof valuePrestamo === "number" ? valuePrestamo : 0}
         onChange={handleSliderChange}
       />
     </Box>

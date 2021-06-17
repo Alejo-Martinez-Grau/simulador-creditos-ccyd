@@ -77,7 +77,7 @@ function App() {
                   <Grid item xs={4}>
                   <Box>
                     <Button variant="contained" color="secondary" size='small' onClick={()=> (console.log('Boton: Ver detalle de cuotas.'))}>
-                      VER DETALLE DE CUOTAS
+                      <Box fontSize={12}> VER DETALLE DE CUOTAS </Box>
                     </Button>
                   </Box>
                   </Grid>

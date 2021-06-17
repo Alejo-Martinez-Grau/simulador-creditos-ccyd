@@ -3,21 +3,21 @@ import { Slider, OutlinedInput, Box, Grid, Typography, ThemeProvider,} from "@ma
 import sliderTheme from "./slidersTheme";
 
 const CuotasSlider = () => {
-  const [value, setValue] = React.useState(24);
+  const [valueCuotas, setValueCuotas] = React.useState(24);
 
   const handleSliderChange = (event, newValue) => {
-    setValue(newValue);
+    setValueCuotas(newValue);
   };
 
   const handleInputChange = (event) => {
-    setValue(event.target.value === "" ? "" : Number(event.target.value));
+    setValueCuotas(event.target.value === "" ? "" : Number(event.target.value));
   };
 
   const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 24) {
-      setValue(24);
+    if (valueCuotas < 3) {
+      setValueCuotas(3);
+    } else if (valueCuotas > 24) {
+      setValueCuotas(24);
     }
   };
 
@@ -43,11 +43,11 @@ const CuotasSlider = () => {
           <Box color='primary.main' >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> PLAZO:</Box></Typography>
         </Box>
-        <Grid item xs={4}>
+        <Grid item xs={5} sm={4}>
         <OutlinedInput
           fullWidth
         variant="outlined"
-          value={value}
+          value={valueCuotas}
           margin="dense"
           onChange={handleInputChange}
           onBlur={handleBlur}
@@ -73,7 +73,7 @@ const CuotasSlider = () => {
         marks={marks}
         min={3}
         max={24}
-        value={typeof value === "number" ? value : 0}
+        value={typeof valueCuotas === "number" ? valueCuotas : 0}
         onChange={handleSliderChange}
       />
     </Box>
