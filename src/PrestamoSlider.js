@@ -44,7 +44,7 @@ const PrestamoSlider = () => {
       >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> MONTO TOTAL:</Box></Typography>
         <OutlinedInput
-        color='secondary'
+        color='primary'
         variant="outlined"
           value={value}
           margin="dense"
@@ -62,7 +62,7 @@ const PrestamoSlider = () => {
       </Grid>
 
       <Slider
-        color='secondary'
+        color='primary'
         defaultValue={50000}
         aria-labelledby="cuotas-slider"
         valueLabelDisplay="auto"
