@@ -2,22 +2,21 @@ import React from "react";
 import { Slider, OutlinedInput, Box, Grid, Typography, ThemeProvider,} from "@material-ui/core";
 import sliderTheme from "./slidersTheme";
 
-const CuotasSlider = () => {
-  const [valueCuotas, setValueCuotas] = React.useState(24);
+const CuotasSlider = ({valueCuotas, onValueCuotasChange}) => {
 
   const handleSliderChange = (event, newValue) => {
-    setValueCuotas(newValue);
+    onValueCuotasChange(newValue);
   };
 
   const handleInputChange = (event) => {
-    setValueCuotas(event.target.value === "" ? "" : Number(event.target.value));
+    onValueCuotasChange(event.target.value === "" ? "" : Number(event.target.value));
   };
 
   const handleBlur = () => {
     if (valueCuotas < 3) {
-      setValueCuotas(3);
+      onValueCuotasChange(3);
     } else if (valueCuotas > 24) {
-      setValueCuotas(24);
+      onValueCuotasChange(24);
     }
   };
 

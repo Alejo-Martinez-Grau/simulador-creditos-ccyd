@@ -14,6 +14,11 @@ import customTheme from "./customTheme";
 
 
 function App() {
+  const [valueCuotas, setValueCuotas] = React.useState(24);
+  const [valuePrestamo, setValuePrestamo] = React.useState(50000);
+
+  const cuotaFija = (Math.round(valuePrestamo/valueCuotas * 100) / 100).toFixed(2); //(Math.round(valuePrestamo/valueCuotas * 100) / 100).toFixed(2);
+
   return (
     <ThemeProvider theme={customTheme}>
 
@@ -33,10 +38,10 @@ function App() {
 
                 {/* Sliders */}
                 <Box  px={3}>
-                  <PrestamoSlider m />
+                  <PrestamoSlider valuePrestamo={valuePrestamo} onValuePrestamoChange={setValuePrestamo} />
                 </Box>
                 <Box py={2} px={3}>
-                  <CuotasSlider />
+                  <CuotasSlider valueCuotas={valueCuotas} onValueCuotasChange={setValueCuotas} />
                 </Box>
 
                 {/*Caja con Valor de Cuota */}
@@ -52,7 +57,7 @@ function App() {
                     </Typography>
 
                     <Typography align="center" variant="h4">
-                      <Box fontWeight="fontWeightBold">$2,500.90</Box>
+                      <Box fontWeight="fontWeightBold">{cuotaFija}</Box>
                     </Typography>
                   </Grid>
                 </Box>

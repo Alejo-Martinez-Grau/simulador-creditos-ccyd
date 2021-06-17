@@ -4,22 +4,22 @@ import sliderTheme from "./slidersTheme";
 
 
 
-const PrestamoSlider = (props) => {
-  const [valuePrestamo, setValuePrestamo] = React.useState(50000);
+const PrestamoSlider = ({valuePrestamo, onValuePrestamoChange}) => {
+ 
 
   const handleSliderChange = (event, newValue) => {
-    setValuePrestamo(newValue);
+    onValuePrestamoChange(newValue);
   };
 
   const handleInputChange = (event) => {
-    setValuePrestamo(event.target.value === "" ? "" : Number(event.target.value));
+    onValuePrestamoChange(event.target.value === "" ? "" : Number(event.target.value));
   };
 
   const handleBlur = () => {
     if (valuePrestamo < 5000) {
-      setValuePrestamo(5000);
+      onValuePrestamoChange(5000);
     } else if (valuePrestamo > 50000) {
-      setValuePrestamo(50000);
+      onValuePrestamoChange(50000);
     }
   };
 
