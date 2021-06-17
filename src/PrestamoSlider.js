@@ -1,5 +1,8 @@
 import React from "react";
-import { Slider, OutlinedInput, Box, Grid, Typography, InputAdornment } from "@material-ui/core";
+import { Slider, OutlinedInput, Box, Grid, Typography, InputAdornment, ThemeProvider } from "@material-ui/core";
+import sliderTheme from "./slidersTheme";
+
+
 
 const PrestamoSlider = () => {
   const [value, setValue] = React.useState(50000);
@@ -31,6 +34,7 @@ const PrestamoSlider = () => {
     },
   ];
   return (
+    <ThemeProvider theme={sliderTheme}>
     <Box color="#FFF">
       <Grid
          container
@@ -71,6 +75,7 @@ const PrestamoSlider = () => {
         onChange={handleSliderChange}
       />
     </Box>
+    </ThemeProvider>
   );
 };
 

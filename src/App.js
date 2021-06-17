@@ -6,37 +6,12 @@ import {
   Box,
   Typography,
   Paper,
+  ThemeProvider 
 } from "@material-ui/core";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-
 import CuotasSlider from "./CuotasSlider";
 import PrestamoSlider from "./PrestamoSlider";
+import customTheme from "./customTheme";
 
-const customTheme = createMuiTheme({
-  typography: {
-    fontFamily: ["montserrat"].join(","),
-  },
-  shape: {
-    borderRadius: 0,
-  }, 
-
-  palette: {
-    //#00365C #013C68 #004B7D  #07508C #00AD91 #F2FBFF
-    primary: {
-      main: "#00AD91",
-      contrastText: "#fff",
-    },
-    secondary: {
-      main: "#07508C",
-    },
-    default: {
-      main: "#FFF",
-    },
-    bg1: {
-      main: "#00365C",
-    },
-  },
-});
 
 function App() {
   return (
@@ -46,11 +21,15 @@ function App() {
           <Paper>
             <Box bgcolor="bg1.main">
               <Container>
+                
+                {/* Título */}
                 <Box p={4} color="default.main">
                   <Typography component="h1" variant="h4" align="center">
                     <Box fontWeight='fontWeightBold'> Simulá tu crédito</Box>
                   </Typography>
                 </Box>
+
+                {/* Sliders */}
                 <Box  px={3}>
                   <PrestamoSlider m />
                 </Box>
@@ -58,6 +37,7 @@ function App() {
                   <CuotasSlider />
                 </Box>
 
+                {/* Valor de Cuota */}
                 <Box color="default.main" bgcolor='#00243d' p={1}>
                   <Grid
                     container
@@ -75,6 +55,7 @@ function App() {
                   </Grid>
                 </Box>
 
+                {/* Botones */}
                 <Box pb={4}>
                 <Grid
                   container

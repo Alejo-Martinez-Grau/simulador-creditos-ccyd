@@ -1,5 +1,6 @@
 import React from "react";
-import { Slider, OutlinedInput, Box, Grid, Typography } from "@material-ui/core";
+import { Slider, OutlinedInput, Box, Grid, Typography, ThemeProvider,} from "@material-ui/core";
+import sliderTheme from "./slidersTheme";
 
 const CuotasSlider = () => {
   const [value, setValue] = React.useState(24);
@@ -31,6 +32,7 @@ const CuotasSlider = () => {
     },
   ];
   return (
+    <ThemeProvider theme={sliderTheme}>
     <Box>
       <Grid
          container
@@ -38,11 +40,11 @@ const CuotasSlider = () => {
          justify="space-between"
          alignItems="center"
       >
-          <Box color='default.main' >
+          <Box color='primary.main' >
         <Typography variant='body1'><Box fontWeight='fontWeightLight'> PLAZO:</Box></Typography>
         </Box>
         <OutlinedInput
-        color='primary'
+          
         variant="outlined"
           value={value}
           margin="dense"
@@ -60,6 +62,7 @@ const CuotasSlider = () => {
 
       <Slider
         
+        // className={classes.sliderStyle}
         defaultValue={3}
         aria-labelledby="cuotas-slider"
         valueLabelDisplay="auto"
@@ -72,6 +75,7 @@ const CuotasSlider = () => {
         onChange={handleSliderChange}
       />
     </Box>
+    </ThemeProvider>
   );
 };
 
