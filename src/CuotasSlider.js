@@ -51,7 +51,7 @@ const CuotasSlider = ({valueCuotas, onValueCuotasChange}) => {
           onChange={handleInputChange}
           onBlur={handleBlur}
           inputProps={{
-            step: 3,
+            step: 1,
             min: 3,
             max: 24,
             type: "number",
@@ -68,7 +68,7 @@ const CuotasSlider = ({valueCuotas, onValueCuotasChange}) => {
         aria-labelledby="cuotas-slider"
         valueLabelDisplay="auto"
         
-        step={3}
+        step={1}
         marks={marks}
         min={3}
         max={24}

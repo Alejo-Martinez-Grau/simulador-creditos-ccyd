@@ -17,7 +17,7 @@ function App() {
   const [valueCuotas, setValueCuotas] = React.useState(24);
   const [valuePrestamo, setValuePrestamo] = React.useState(50000);
 
-  const cuotaFija = (Math.round(valuePrestamo/valueCuotas * 100) / 100).toFixed(2); //(Math.round(valuePrestamo/valueCuotas * 100) / 100).toFixed(2);
+  const cuotaFija = (Math.round((valuePrestamo/valueCuotas) * 197.98) / 100).toFixed(2);
 
   return (
     <ThemeProvider theme={customTheme}>
